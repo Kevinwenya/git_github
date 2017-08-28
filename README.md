@@ -1,6 +1,6 @@
 # git_github
-linux_git_github
-1 Linux下Git和GitHub环境的搭建
+## linux_git_github
+### 1 Linux下Git和GitHub环境的搭建
     第一步： 安装Git，使用命令 “sudo apt-get install git”
     第二步： 创建GitHub帐号
     第三步： 生成ssh key，使用命令 “ssh-keygen -t rsa -C "your_email@youremail.com"”，your_email是你的email
@@ -12,7 +12,7 @@ linux_git_github
                  git config --global user.name "your name"   //配置用户名
                  git config --global user.email "your email"    //配置email 
 
- 2 利用Git从本地上传到GitHub
+### 2 利用Git从本地上传到GitHub
     第一步： 进入要所要上传文件的目录输入命令 “git init”
     第二步： 创建一个本地仓库，使用命令 “git remote add origin git@github.com:yourName/yourRepo.git”
                   youname是你的GitHub的用户名，yourRepo是你要上传到GitHub的仓库
@@ -20,7 +20,7 @@ linux_git_github
                   然后把这个添加提交到本地的仓库，使用命令 ”git commit -m ”说明这次的提交“ “
                   最后把本地仓库提交到远程的GitHub仓库，使用命令 ”git push origin master“
 
- 3 从GitHub克隆项目到本地
+### 3 从GitHub克隆项目到本地
      第一步： 到GitHub的某个仓库，然后复制右边的有个“HTTPS clone url”
      第二步： 回到要存放的目录下，使用命令 "git clone https://github.com/chenguolin/scrapy.git"，红色的url只是一个例子
      第三步： 如果本地的版本不是最新的，可以使用命令 “git fetch origin”
@@ -28,7 +28,7 @@ linux_git_github
      
      如果你不想手动去合并，那么你可以使用： git pull origin master // 这个命令可以拉去最新版本并自动合并
 
- 4 GitHub的分支管理
+### 4 GitHub的分支管理
      创建
      1 创建一个本地分支： git branch <新分支名字>
      2 将本地分支同步到GitHub上面： git push <本地仓库名> <新分支名>
@@ -39,10 +39,10 @@ linux_git_github
      1 从本地删除一个分支： git branch -d <分支名称>
      2 同步到GitHub上面删除这个分支： git push <本地仓库名> :<GitHub端分支>
 
- 5 常见错误
+### 5 常见错误
     1 如果出现报错为ERROR: Repository not found.fatal: The remote end hung up unexpectedly则代表你的 origin 的url 链接有误，可能是创建错误，也可能是这个 git@github.com:xxx/new-project.git url 指定不正确。重新创建。
  
- 6 linux下如何将本地代码上传到github上
+### 6 linux下如何将本地代码上传到github上
 (1)在本地新建一个文件夹用来保存我github上的文件
 mkdir my_github
 (2)将版本库克隆至本地
