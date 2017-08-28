@@ -41,3 +41,21 @@ linux_git_github
 
  5 常见错误
     1 如果出现报错为ERROR: Repository not found.fatal: The remote end hung up unexpectedly则代表你的 origin 的url 链接有误，可能是创建错误，也可能是这个 git@github.com:xxx/new-project.git url 指定不正确。重新创建。
+ 
+ 6 linux下如何将本地代码上传到github上
+(1)在本地新建一个文件夹用来保存我github上的文件
+mkdir my_github
+(2)将版本库克隆至本地
+cd my_github
+git clone 你的项目的.git地址
+(3)将我写好的代码复制到该目录下
+cp XXX ./克隆的项目目录
+(4)回到克隆的项目目录下，添加文件到版本库
+git add XXX
+如果要上传许多文件，用命令:
+git add --all
+(5)提交，产生版本记录，注意代码依然在本地
+git commit -m "git add XXX"
+这一步使得更改生效，""里面的内容即是(4)所做的操作
+(6)将修改提交到github上
+git push origin
